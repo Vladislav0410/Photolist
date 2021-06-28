@@ -1,0 +1,11 @@
+<div class="body">
+    <app-header></app-header>
+    <div class="main">
+        <app-menu></app-menu>
+        <div class="content">
+            <app-search-input (searchInput)="search($event)"></app-search-input>
+            <app-search-result [searchInput]="searchInput"></app-search-result>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

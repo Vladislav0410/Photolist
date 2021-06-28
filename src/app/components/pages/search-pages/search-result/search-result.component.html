@@ -1,0 +1,24 @@
+<p class="noImage" *ngIf="images.length == 0">
+    No images here. Would you try to search for anything else?
+</p>
+<mat-paginator [length]="images.length" [pageSize]="pageSize" (page)="getPaginatorData($event)" *ngIf="images.length != 0">
+</mat-paginator>
+<div class="scroll">
+    <div class="rows">
+        <div *ngFor="let image of images | slice: lowValue:highValue">
+            <mat-card class="card">
+                <img mat-card-image src="{{ image.url }}_m.jpg" title="{{ image.title }}" alt="Image not found" />
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="bookmark(image)">
+            Bookmark it!
+          </button>
+                    <div>
+                        <mat-form-field class="cardInput" appearance="outline">
+                            <input matInput (input)="tags($event, image)" placeholder="some tags?" />
+                        </mat-form-field>
+                    </div>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

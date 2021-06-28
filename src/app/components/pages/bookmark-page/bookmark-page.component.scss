@@ -1,0 +1,17 @@
+.body {
+    overflow: hidden;
+    height: 100%;
+}
+
+.main {
+    position: relative;
+    top: 70px;
+    margin-left: 20px;
+    margin-right: 10px;
+    display: flex;
+}
+
+.content {
+    margin-left: 20px;
+    width: 100%;
+}

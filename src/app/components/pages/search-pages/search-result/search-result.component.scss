@@ -1,0 +1,28 @@
+img {
+    object-fit: fill;
+    height: calc(50vh - 225px);
+}
+
+.scroll {
+    overflow-y: auto;
+    height: calc(100vh - 285px);
+}
+
+.rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.noImage {
+    font-size: 25px;
+}
+
+.card {
+    padding: 35px 35px 20px 35px;
+    border: 5px black solid;
+}
+
+.cardInput {
+    width: 100%;
+}
